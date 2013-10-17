@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>plg_system_ctemplate</name>
+	<author>Daniel Dimitrov</author>
+	<creationDate>2013-17-10</creationDate>
+	<copyright>compojoom.com - all rights reserved!</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>daniel@compojoom.com</authorEmail>
+	<authorUrl>https://compojoom.com</authorUrl>
+	<version>1.0</version>
+	<description>PLG_CTEMPLATE_XML_DESCRIPTION</description>
+	<files>
+		##PACKAGEFILESPLUGIN##
+	</files>
+	<languages folder="administrator/language">
+		##ADMINLANGUAGEFILES##
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/system/ctemplate/models/fields">
+				<field type="usergroup" name="usergroup"
+				       label="PLG_CTEMPLATE_USERGROUP_LABEL" description="PLG_CTEMPLATE_USERGROUP_DESC" default="0"
+						required="true" />
+				<field type="ctemplate" name="template"
+				       label="PLG_CTEMPLATE_TEMPLATE_LABEL" description="PLG_CTEMPLATE_TEMPLATE_DESC"
+				       required="true"
+					/>
+			</fieldset>
+		</fields>
+	</config>
+
+
+	<updateservers>
+		<server type="plugin" priority="1" name="Updates for CTemplate">
+			<![CDATA[https://compojoom.com/index.php?option=com_ars&view=update&task=stream&format=xml&id=19]]></server>
+	</updateservers>
+
+</extension>
